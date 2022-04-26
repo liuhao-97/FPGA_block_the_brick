@@ -2,11 +2,12 @@
 2020.2
 Nov 18 2020
 09:20:35
-/home/liuh0f/project/pro1/pro1.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v,1649339613,verilog,,/home/liuh0f/project/pro1/pro1.srcs/sources_1/new/drawcon.v,,clk_wiz_0,,,../../../../pro1.gen/sources_1/ip/clk_wiz_0,,,,,
-/home/liuh0f/project/pro1/pro1.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v,1649339613,verilog,,/home/liuh0f/project/pro1/pro1.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v,,clk_wiz_0_clk_wiz,,,../../../../pro1.gen/sources_1/ip/clk_wiz_0,,,,,
-/home/liuh0f/project/pro1/pro1.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,,,,,,,
-,,,,,,game_top_tb,,,,,,,,
-/home/liuh0f/project/pro1/pro1.srcs/sim_1/new/vga_out_tb.v,1649259238,verilog,,,,vga_out_tb,,,../../../../pro1.gen/sources_1/ip/clk_wiz_0,,,,,
-,,,,/home/liuh0f/project/pro1/pro1.srcs/sources_1/new/game_top.v,,drawcon,,,,,,,,
-,,,,/home/liuh0f/project/pro1/pro1.srcs/sources_1/new/vga_out.v,,game_top,,,,,,,,
-/home/liuh0f/project/pro1/pro1.srcs/sources_1/new/vga_out.v,1649328276,verilog,,/home/liuh0f/project/pro1/pro1.srcs/sim_1/new/game_top_tb.v,,vga_out,,,../../../../pro1.gen/sources_1/ip/clk_wiz_0,,,,,
+/home/liuh0f/pro0423/pro1/pro1.sim/sim_1/behav/xsim/glbl.v,1649746395,verilog,,,,glbl,,,,,,,,
+/home/liuh0f/pro0423/pro1/pro1.srcs/sim_1/new/all_brick_tb.v,1649867743,verilog,,,,all_brick_tb,,,../../../../pro1.gen/sources_1/ip/clk_wiz_0,,,,,
+/home/liuh0f/pro0423/pro1/pro1.srcs/sim_1/new/ball_tb.v,1650725782,verilog,,,,ball_tb,,,../../../../pro1.gen/sources_1/ip/clk_wiz_0,,,,,
+/home/liuh0f/pro0423/pro1/pro1.srcs/sim_1/new/brick_tb.v,1650743809,verilog,,,,brick_tb,,,../../../../pro1.gen/sources_1/ip/clk_wiz_0,,,,,
+/home/liuh0f/pro0423/pro1/pro1.srcs/sources_1/new/RanGen.v,1650721769,verilog,,/home/liuh0f/pro0423/pro1/pro1.srcs/sources_1/new/ball.v,,RanGen,,,../../../../pro1.gen/sources_1/ip/clk_wiz_0,,,,,
+/home/liuh0f/pro0423/pro1/pro1.srcs/sources_1/new/RanGen_tb.v,1650720179,verilog,,,,RanGen_tb,,,../../../../pro1.gen/sources_1/ip/clk_wiz_0,,,,,
+/home/liuh0f/pro0423/pro1/pro1.srcs/sources_1/new/all_brick.v,1650734667,verilog,,/home/liuh0f/pro0423/pro1/pro1.srcs/sources_1/new/brick.v,,all_brick,,,../../../../pro1.gen/sources_1/ip/clk_wiz_0,,,,,
+/home/liuh0f/pro0423/pro1/pro1.srcs/sources_1/new/ball.v,1650739483,verilog,,/home/liuh0f/pro0423/pro1/pro1.srcs/sim_1/new/ball_tb.v,,ball,,,../../../../pro1.gen/sources_1/ip/clk_wiz_0,,,,,
+/home/liuh0f/pro0423/pro1/pro1.srcs/sources_1/new/brick.v,1650743464,verilog,,/home/liuh0f/pro0423/pro1/pro1.srcs/sim_1/new/brick_tb.v,,brick,,,../../../../pro1.gen/sources_1/ip/clk_wiz_0,,,,,

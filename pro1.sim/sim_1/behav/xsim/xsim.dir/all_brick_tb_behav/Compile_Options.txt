@@ -1,0 +1,1 @@
+-wto "e45be7f0c1314d72ba24392b21312c98" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "all_brick_tb_behav" "xil_defaultlib.all_brick_tb" "xil_defaultlib.glbl" -log "elaborate.log" 

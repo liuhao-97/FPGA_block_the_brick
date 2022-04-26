@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-| Date         : Mon Apr 11 07:45:13 2022
-| Host         : rsws08.kaust.edu.sa running 64-bit Ubuntu 18.04.6 LTS
+| Date         : Mon Apr 25 16:10:40 2022
+| Host         : rsws09.kaust.edu.sa running 64-bit Ubuntu 18.04.6 LTS
 | Command      : report_methodology -file game_top_methodology_drc_routed.rpt -pb game_top_methodology_drc_routed.pb -rpx game_top_methodology_drc_routed.rpx
 | Design       : game_top
 | Device       : xc7a100tcsg324-1
@@ -23,15 +23,14 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 57
-+-----------+------------------+------------------------------------------------------------------+------------+
-| Rule      | Severity         | Description                                                      | Violations |
-+-----------+------------------+------------------------------------------------------------------+------------+
-| TIMING-17 | Critical Warning | Non-clocked sequential cell                                      | 54         |
-| TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin                        | 1          |
-| CKLD-2    | Warning          | Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads | 1          |
-| TIMING-20 | Warning          | Non-clocked latch                                                | 1          |
-+-----------+------------------+------------------------------------------------------------------+------------+
+             Violations found: 269
++-----------+------------------+-------------------------------------------+------------+
+| Rule      | Severity         | Description                               | Violations |
++-----------+------------------+-------------------------------------------+------------+
+| TIMING-17 | Critical Warning | Non-clocked sequential cell               | 184        |
+| TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin | 1          |
+| TIMING-20 | Warning          | Non-clocked latch                         | 84         |
++-----------+------------------+-------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
@@ -147,162 +146,812 @@ Related violations: <none>
 
 TIMING-17#23 Critical Warning
 Non-clocked sequential cell  
-The clock pin draw/ballpos_y_reg[0]/C is not reached by a timing clock
+The clock pin draw/allbrick/brick0/brick_current_stage_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#24 Critical Warning
 Non-clocked sequential cell  
-The clock pin draw/ballpos_y_reg[1]/C is not reached by a timing clock
+The clock pin draw/allbrick/brick0/brick_current_stage_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#25 Critical Warning
 Non-clocked sequential cell  
-The clock pin draw/ballpos_y_reg[2]/C is not reached by a timing clock
+The clock pin draw/allbrick/brick0/hit_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#26 Critical Warning
 Non-clocked sequential cell  
-The clock pin draw/ballpos_y_reg[3]/C is not reached by a timing clock
+The clock pin draw/allbrick/brick1/brick_current_stage_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#27 Critical Warning
 Non-clocked sequential cell  
-The clock pin draw/ballpos_y_reg[4]/C is not reached by a timing clock
+The clock pin draw/allbrick/brick1/brick_current_stage_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#28 Critical Warning
 Non-clocked sequential cell  
-The clock pin draw/ballpos_y_reg[5]/C is not reached by a timing clock
+The clock pin draw/allbrick/brick1/hit_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#29 Critical Warning
 Non-clocked sequential cell  
-The clock pin draw/ballpos_y_reg[6]/C is not reached by a timing clock
+The clock pin draw/allbrick/brick10/brick_current_stage_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#30 Critical Warning
 Non-clocked sequential cell  
-The clock pin draw/ballpos_y_reg[7]/C is not reached by a timing clock
+The clock pin draw/allbrick/brick10/brick_current_stage_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#31 Critical Warning
 Non-clocked sequential cell  
-The clock pin draw/ballpos_y_reg[8]/C is not reached by a timing clock
+The clock pin draw/allbrick/brick10/hit_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#32 Critical Warning
 Non-clocked sequential cell  
-The clock pin draw/ballpos_y_reg[9]/C is not reached by a timing clock
+The clock pin draw/allbrick/brick11/brick_current_stage_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#33 Critical Warning
 Non-clocked sequential cell  
-The clock pin draw/q_reg/C is not reached by a timing clock
+The clock pin draw/allbrick/brick11/brick_current_stage_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#34 Critical Warning
 Non-clocked sequential cell  
-The clock pin poslog/blkpos_x_reg[0]/C is not reached by a timing clock
+The clock pin draw/allbrick/brick11/hit_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#35 Critical Warning
 Non-clocked sequential cell  
-The clock pin poslog/blkpos_x_reg[10]/C is not reached by a timing clock
+The clock pin draw/allbrick/brick12/brick_current_stage_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#36 Critical Warning
 Non-clocked sequential cell  
-The clock pin poslog/blkpos_x_reg[1]/C is not reached by a timing clock
+The clock pin draw/allbrick/brick12/brick_current_stage_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#37 Critical Warning
 Non-clocked sequential cell  
-The clock pin poslog/blkpos_x_reg[2]/C is not reached by a timing clock
+The clock pin draw/allbrick/brick12/hit_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#38 Critical Warning
 Non-clocked sequential cell  
-The clock pin poslog/blkpos_x_reg[3]/C is not reached by a timing clock
+The clock pin draw/allbrick/brick13/brick_current_stage_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#39 Critical Warning
 Non-clocked sequential cell  
-The clock pin poslog/blkpos_x_reg[4]/C is not reached by a timing clock
+The clock pin draw/allbrick/brick13/brick_current_stage_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#40 Critical Warning
 Non-clocked sequential cell  
-The clock pin poslog/blkpos_x_reg[5]/C is not reached by a timing clock
+The clock pin draw/allbrick/brick13/hit_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#41 Critical Warning
 Non-clocked sequential cell  
-The clock pin poslog/blkpos_x_reg[6]/C is not reached by a timing clock
+The clock pin draw/allbrick/brick14/brick_current_stage_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#42 Critical Warning
 Non-clocked sequential cell  
-The clock pin poslog/blkpos_x_reg[7]/C is not reached by a timing clock
+The clock pin draw/allbrick/brick14/brick_current_stage_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#43 Critical Warning
 Non-clocked sequential cell  
-The clock pin poslog/blkpos_x_reg[8]/C is not reached by a timing clock
+The clock pin draw/allbrick/brick14/hit_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#44 Critical Warning
 Non-clocked sequential cell  
-The clock pin poslog/blkpos_x_reg[9]/C is not reached by a timing clock
+The clock pin draw/allbrick/brick15/brick_current_stage_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#45 Critical Warning
 Non-clocked sequential cell  
-The clock pin poslog/blkpos_y_reg[0]/C is not reached by a timing clock
+The clock pin draw/allbrick/brick15/brick_current_stage_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#46 Critical Warning
 Non-clocked sequential cell  
-The clock pin poslog/blkpos_y_reg[1]/C is not reached by a timing clock
+The clock pin draw/allbrick/brick15/hit_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#47 Critical Warning
 Non-clocked sequential cell  
-The clock pin poslog/blkpos_y_reg[2]/C is not reached by a timing clock
+The clock pin draw/allbrick/brick2/brick_current_stage_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#48 Critical Warning
 Non-clocked sequential cell  
-The clock pin poslog/blkpos_y_reg[3]/C is not reached by a timing clock
+The clock pin draw/allbrick/brick2/brick_current_stage_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#49 Critical Warning
 Non-clocked sequential cell  
-The clock pin poslog/blkpos_y_reg[4]/C is not reached by a timing clock
+The clock pin draw/allbrick/brick2/hit_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#50 Critical Warning
 Non-clocked sequential cell  
-The clock pin poslog/blkpos_y_reg[5]/C is not reached by a timing clock
+The clock pin draw/allbrick/brick3/brick_current_stage_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#51 Critical Warning
 Non-clocked sequential cell  
-The clock pin poslog/blkpos_y_reg[6]/C is not reached by a timing clock
+The clock pin draw/allbrick/brick3/brick_current_stage_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#52 Critical Warning
 Non-clocked sequential cell  
-The clock pin poslog/blkpos_y_reg[7]/C is not reached by a timing clock
+The clock pin draw/allbrick/brick3/hit_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#53 Critical Warning
 Non-clocked sequential cell  
-The clock pin poslog/blkpos_y_reg[8]/C is not reached by a timing clock
+The clock pin draw/allbrick/brick4/brick_current_stage_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#54 Critical Warning
 Non-clocked sequential cell  
+The clock pin draw/allbrick/brick4/brick_current_stage_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#55 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/allbrick/brick4/hit_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#56 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/allbrick/brick5/brick_current_stage_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#57 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/allbrick/brick5/brick_current_stage_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#58 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/allbrick/brick5/hit_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#59 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/allbrick/brick6/brick_current_stage_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#60 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/allbrick/brick6/brick_current_stage_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#61 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/allbrick/brick6/hit_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#62 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/allbrick/brick7/brick_current_stage_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#63 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/allbrick/brick7/brick_current_stage_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#64 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/allbrick/brick7/hit_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#65 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/allbrick/brick8/brick_current_stage_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#66 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/allbrick/brick8/brick_current_stage_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#67 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/allbrick/brick8/hit_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#68 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/allbrick/brick9/brick_current_stage_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#69 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/allbrick/brick9/brick_current_stage_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#70 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/allbrick/brick9/hit_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#71 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_current_stage_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#72 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_current_stage_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#73 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_current_stage_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#74 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_current_stage_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#75 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_current_stage_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#76 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_current_stage_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#77 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_x_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#78 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_x_reg[0]_rep/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#79 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_x_reg[0]_rep__0/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#80 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_x_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#81 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_x_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#82 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_x_reg[1]_rep/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#83 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_x_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#84 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_x_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#85 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_x_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#86 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_x_reg[4]_rep/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#87 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_x_reg[4]_rep__0/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#88 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_x_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#89 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_x_reg[5]_rep/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#90 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_x_reg[5]_rep__0/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#91 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_x_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#92 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_x_reg[6]_rep/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#93 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_x_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#94 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_x_reg[7]_rep/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#95 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_x_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#96 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_x_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#97 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_y_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#98 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_y_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#99 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_y_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#100 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_y_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#101 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_y_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#102 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_y_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#103 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_y_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#104 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_y_reg[6]_rep/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#105 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_y_reg[6]_rep__0/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#106 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_y_reg[6]_rep__1/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#107 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_y_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#108 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_y_reg[7]_rep/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#109 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_y_reg[7]_rep__0/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#110 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_y_reg[7]_rep__1/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#111 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_y_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#112 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_y_reg[8]_rep/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#113 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_y_reg[8]_rep__0/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#114 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_y_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#115 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_y_reg[9]_rep/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#116 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/ball_position_y_reg[9]_rep__0/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#117 Critical Warning
+Non-clocked sequential cell  
+The clock pin draw/ball_pos/gameover_sig_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#118 Critical Warning
+Non-clocked sequential cell  
+The clock pin led_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#119 Critical Warning
+Non-clocked sequential cell  
+The clock pin led_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#120 Critical Warning
+Non-clocked sequential cell  
+The clock pin led_reg[11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#121 Critical Warning
+Non-clocked sequential cell  
+The clock pin led_reg[12]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#122 Critical Warning
+Non-clocked sequential cell  
+The clock pin led_reg[13]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#123 Critical Warning
+Non-clocked sequential cell  
+The clock pin led_reg[14]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#124 Critical Warning
+Non-clocked sequential cell  
+The clock pin led_reg[15]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#125 Critical Warning
+Non-clocked sequential cell  
+The clock pin led_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#126 Critical Warning
+Non-clocked sequential cell  
+The clock pin led_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#127 Critical Warning
+Non-clocked sequential cell  
+The clock pin led_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#128 Critical Warning
+Non-clocked sequential cell  
+The clock pin led_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#129 Critical Warning
+Non-clocked sequential cell  
+The clock pin led_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#130 Critical Warning
+Non-clocked sequential cell  
+The clock pin led_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#131 Critical Warning
+Non-clocked sequential cell  
+The clock pin led_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#132 Critical Warning
+Non-clocked sequential cell  
+The clock pin led_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#133 Critical Warning
+Non-clocked sequential cell  
+The clock pin led_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#134 Critical Warning
+Non-clocked sequential cell  
+The clock pin poslog/blkpos_x_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#135 Critical Warning
+Non-clocked sequential cell  
+The clock pin poslog/blkpos_x_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#136 Critical Warning
+Non-clocked sequential cell  
+The clock pin poslog/blkpos_x_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#137 Critical Warning
+Non-clocked sequential cell  
+The clock pin poslog/blkpos_x_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#138 Critical Warning
+Non-clocked sequential cell  
+The clock pin poslog/blkpos_x_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#139 Critical Warning
+Non-clocked sequential cell  
+The clock pin poslog/blkpos_x_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#140 Critical Warning
+Non-clocked sequential cell  
+The clock pin poslog/blkpos_x_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#141 Critical Warning
+Non-clocked sequential cell  
+The clock pin poslog/blkpos_x_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#142 Critical Warning
+Non-clocked sequential cell  
+The clock pin poslog/blkpos_x_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#143 Critical Warning
+Non-clocked sequential cell  
+The clock pin poslog/blkpos_x_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#144 Critical Warning
+Non-clocked sequential cell  
+The clock pin poslog/blkpos_x_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#145 Critical Warning
+Non-clocked sequential cell  
+The clock pin poslog/blkpos_y_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#146 Critical Warning
+Non-clocked sequential cell  
+The clock pin poslog/blkpos_y_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#147 Critical Warning
+Non-clocked sequential cell  
+The clock pin poslog/blkpos_y_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#148 Critical Warning
+Non-clocked sequential cell  
+The clock pin poslog/blkpos_y_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#149 Critical Warning
+Non-clocked sequential cell  
+The clock pin poslog/blkpos_y_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#150 Critical Warning
+Non-clocked sequential cell  
+The clock pin poslog/blkpos_y_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#151 Critical Warning
+Non-clocked sequential cell  
+The clock pin poslog/blkpos_y_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#152 Critical Warning
+Non-clocked sequential cell  
+The clock pin poslog/blkpos_y_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#153 Critical Warning
+Non-clocked sequential cell  
 The clock pin poslog/blkpos_y_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#154 Critical Warning
+Non-clocked sequential cell  
+The clock pin score_record/uut/clk_count_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#155 Critical Warning
+Non-clocked sequential cell  
+The clock pin score_record/uut/clk_count_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#156 Critical Warning
+Non-clocked sequential cell  
+The clock pin score_record/uut/clk_count_reg[11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#157 Critical Warning
+Non-clocked sequential cell  
+The clock pin score_record/uut/clk_count_reg[12]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#158 Critical Warning
+Non-clocked sequential cell  
+The clock pin score_record/uut/clk_count_reg[13]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#159 Critical Warning
+Non-clocked sequential cell  
+The clock pin score_record/uut/clk_count_reg[14]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#160 Critical Warning
+Non-clocked sequential cell  
+The clock pin score_record/uut/clk_count_reg[15]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#161 Critical Warning
+Non-clocked sequential cell  
+The clock pin score_record/uut/clk_count_reg[16]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#162 Critical Warning
+Non-clocked sequential cell  
+The clock pin score_record/uut/clk_count_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#163 Critical Warning
+Non-clocked sequential cell  
+The clock pin score_record/uut/clk_count_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#164 Critical Warning
+Non-clocked sequential cell  
+The clock pin score_record/uut/clk_count_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#165 Critical Warning
+Non-clocked sequential cell  
+The clock pin score_record/uut/clk_count_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#166 Critical Warning
+Non-clocked sequential cell  
+The clock pin score_record/uut/clk_count_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#167 Critical Warning
+Non-clocked sequential cell  
+The clock pin score_record/uut/clk_count_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#168 Critical Warning
+Non-clocked sequential cell  
+The clock pin score_record/uut/clk_count_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#169 Critical Warning
+Non-clocked sequential cell  
+The clock pin score_record/uut/clk_count_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#170 Critical Warning
+Non-clocked sequential cell  
+The clock pin score_record/uut/clk_count_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#171 Critical Warning
+Non-clocked sequential cell  
+The clock pin score_record/uut/led_index_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#172 Critical Warning
+Non-clocked sequential cell  
+The clock pin score_record/uut/led_index_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#173 Critical Warning
+Non-clocked sequential cell  
+The clock pin score_record/uut/led_index_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#174 Critical Warning
+Non-clocked sequential cell  
+The clock pin seconds_counter_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#175 Critical Warning
+Non-clocked sequential cell  
+The clock pin seconds_counter_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#176 Critical Warning
+Non-clocked sequential cell  
+The clock pin seconds_counter_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#177 Critical Warning
+Non-clocked sequential cell  
+The clock pin seconds_counter_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#178 Critical Warning
+Non-clocked sequential cell  
+The clock pin seconds_counter_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#179 Critical Warning
+Non-clocked sequential cell  
+The clock pin seconds_counter_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#180 Critical Warning
+Non-clocked sequential cell  
+The clock pin seconds_counter_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#181 Critical Warning
+Non-clocked sequential cell  
+The clock pin seconds_counter_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#182 Critical Warning
+Non-clocked sequential cell  
+The clock pin seconds_counter_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#183 Critical Warning
+Non-clocked sequential cell  
+The clock pin seconds_counter_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#184 Critical Warning
+Non-clocked sequential cell  
+The clock pin show_welcome_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-27#1 Critical Warning
@@ -310,19 +959,424 @@ Invalid primary clock on hierarchical pin
 A primary clock clk_wiz/inst/clk_in1 is created on an inappropriate internal pin clk_wiz/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
 Related violations: <none>
 
-CKLD-2#1 Warning
-Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads  
-Clock net clk_IBUF is directly driven by an IO rather than a Clock Buffer or may be an IO driving a mix of Clock Buffer and non-Clock loads. This connectivity should be reviewed and corrected as appropriate. Driver(s): clk60hz_reg/C, clk_counter_reg[0]/C, clk_counter_reg[10]/C,
-clk_counter_reg[11]/C, clk_counter_reg[12]/C, clk_counter_reg[17]/C,
-clk_counter_reg[18]/C, clk_counter_reg[19]/C, clk_counter_reg[1]/C,
-clk_counter_reg[20]/C, clk_counter_reg[2]/C, clk_counter_reg[3]/C,
-clk_counter_reg[4]/C, clk_counter_reg[5]/C, clk_counter_reg[9]/C
- (the first 15 of 24 listed)
-Related violations: <none>
-
 TIMING-20#1 Warning
 Non-clocked latch  
-The latch draw/wall_reg[8] cannot be properly analyzed as its control pin draw/wall_reg[8]/G is not reached by a timing clock
+The latch draw/addra_ball_reg[0] cannot be properly analyzed as its control pin draw/addra_ball_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch draw/addra_ball_reg[1] cannot be properly analyzed as its control pin draw/addra_ball_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#3 Warning
+Non-clocked latch  
+The latch draw/addra_ball_reg[2] cannot be properly analyzed as its control pin draw/addra_ball_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch draw/addra_ball_reg[3] cannot be properly analyzed as its control pin draw/addra_ball_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#5 Warning
+Non-clocked latch  
+The latch draw/addra_ball_reg[4] cannot be properly analyzed as its control pin draw/addra_ball_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#6 Warning
+Non-clocked latch  
+The latch draw/addra_ball_reg[5] cannot be properly analyzed as its control pin draw/addra_ball_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#7 Warning
+Non-clocked latch  
+The latch draw/addra_ball_reg[6] cannot be properly analyzed as its control pin draw/addra_ball_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#8 Warning
+Non-clocked latch  
+The latch draw/addra_ball_reg[7] cannot be properly analyzed as its control pin draw/addra_ball_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#9 Warning
+Non-clocked latch  
+The latch draw/addra_ball_reg[8] cannot be properly analyzed as its control pin draw/addra_ball_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#10 Warning
+Non-clocked latch  
+The latch draw/addra_bg_reg[0] cannot be properly analyzed as its control pin draw/addra_bg_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#11 Warning
+Non-clocked latch  
+The latch draw/addra_bg_reg[10] cannot be properly analyzed as its control pin draw/addra_bg_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#12 Warning
+Non-clocked latch  
+The latch draw/addra_bg_reg[11] cannot be properly analyzed as its control pin draw/addra_bg_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#13 Warning
+Non-clocked latch  
+The latch draw/addra_bg_reg[12] cannot be properly analyzed as its control pin draw/addra_bg_reg[12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#14 Warning
+Non-clocked latch  
+The latch draw/addra_bg_reg[13] cannot be properly analyzed as its control pin draw/addra_bg_reg[13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#15 Warning
+Non-clocked latch  
+The latch draw/addra_bg_reg[1] cannot be properly analyzed as its control pin draw/addra_bg_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#16 Warning
+Non-clocked latch  
+The latch draw/addra_bg_reg[2] cannot be properly analyzed as its control pin draw/addra_bg_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#17 Warning
+Non-clocked latch  
+The latch draw/addra_bg_reg[3] cannot be properly analyzed as its control pin draw/addra_bg_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#18 Warning
+Non-clocked latch  
+The latch draw/addra_bg_reg[4] cannot be properly analyzed as its control pin draw/addra_bg_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#19 Warning
+Non-clocked latch  
+The latch draw/addra_bg_reg[5] cannot be properly analyzed as its control pin draw/addra_bg_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#20 Warning
+Non-clocked latch  
+The latch draw/addra_bg_reg[6] cannot be properly analyzed as its control pin draw/addra_bg_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#21 Warning
+Non-clocked latch  
+The latch draw/addra_bg_reg[7] cannot be properly analyzed as its control pin draw/addra_bg_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#22 Warning
+Non-clocked latch  
+The latch draw/addra_bg_reg[8] cannot be properly analyzed as its control pin draw/addra_bg_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#23 Warning
+Non-clocked latch  
+The latch draw/addra_bg_reg[9] cannot be properly analyzed as its control pin draw/addra_bg_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#24 Warning
+Non-clocked latch  
+The latch draw/addra_over_reg[0] cannot be properly analyzed as its control pin draw/addra_over_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#25 Warning
+Non-clocked latch  
+The latch draw/addra_over_reg[10] cannot be properly analyzed as its control pin draw/addra_over_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#26 Warning
+Non-clocked latch  
+The latch draw/addra_over_reg[11] cannot be properly analyzed as its control pin draw/addra_over_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#27 Warning
+Non-clocked latch  
+The latch draw/addra_over_reg[12] cannot be properly analyzed as its control pin draw/addra_over_reg[12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#28 Warning
+Non-clocked latch  
+The latch draw/addra_over_reg[13] cannot be properly analyzed as its control pin draw/addra_over_reg[13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#29 Warning
+Non-clocked latch  
+The latch draw/addra_over_reg[14] cannot be properly analyzed as its control pin draw/addra_over_reg[14]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#30 Warning
+Non-clocked latch  
+The latch draw/addra_over_reg[15] cannot be properly analyzed as its control pin draw/addra_over_reg[15]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#31 Warning
+Non-clocked latch  
+The latch draw/addra_over_reg[1] cannot be properly analyzed as its control pin draw/addra_over_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#32 Warning
+Non-clocked latch  
+The latch draw/addra_over_reg[2] cannot be properly analyzed as its control pin draw/addra_over_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#33 Warning
+Non-clocked latch  
+The latch draw/addra_over_reg[3] cannot be properly analyzed as its control pin draw/addra_over_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#34 Warning
+Non-clocked latch  
+The latch draw/addra_over_reg[4] cannot be properly analyzed as its control pin draw/addra_over_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#35 Warning
+Non-clocked latch  
+The latch draw/addra_over_reg[5] cannot be properly analyzed as its control pin draw/addra_over_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#36 Warning
+Non-clocked latch  
+The latch draw/addra_over_reg[6] cannot be properly analyzed as its control pin draw/addra_over_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#37 Warning
+Non-clocked latch  
+The latch draw/addra_over_reg[7] cannot be properly analyzed as its control pin draw/addra_over_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#38 Warning
+Non-clocked latch  
+The latch draw/addra_over_reg[8] cannot be properly analyzed as its control pin draw/addra_over_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#39 Warning
+Non-clocked latch  
+The latch draw/addra_over_reg[9] cannot be properly analyzed as its control pin draw/addra_over_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#40 Warning
+Non-clocked latch  
+The latch draw/addra_reg[0] cannot be properly analyzed as its control pin draw/addra_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#41 Warning
+Non-clocked latch  
+The latch draw/addra_reg[10] cannot be properly analyzed as its control pin draw/addra_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#42 Warning
+Non-clocked latch  
+The latch draw/addra_reg[11] cannot be properly analyzed as its control pin draw/addra_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#43 Warning
+Non-clocked latch  
+The latch draw/addra_reg[12] cannot be properly analyzed as its control pin draw/addra_reg[12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#44 Warning
+Non-clocked latch  
+The latch draw/addra_reg[1] cannot be properly analyzed as its control pin draw/addra_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#45 Warning
+Non-clocked latch  
+The latch draw/addra_reg[2] cannot be properly analyzed as its control pin draw/addra_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#46 Warning
+Non-clocked latch  
+The latch draw/addra_reg[3] cannot be properly analyzed as its control pin draw/addra_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#47 Warning
+Non-clocked latch  
+The latch draw/addra_reg[4] cannot be properly analyzed as its control pin draw/addra_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#48 Warning
+Non-clocked latch  
+The latch draw/addra_reg[5] cannot be properly analyzed as its control pin draw/addra_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#49 Warning
+Non-clocked latch  
+The latch draw/addra_reg[6] cannot be properly analyzed as its control pin draw/addra_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#50 Warning
+Non-clocked latch  
+The latch draw/addra_reg[7] cannot be properly analyzed as its control pin draw/addra_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#51 Warning
+Non-clocked latch  
+The latch draw/addra_reg[8] cannot be properly analyzed as its control pin draw/addra_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#52 Warning
+Non-clocked latch  
+The latch draw/addra_reg[9] cannot be properly analyzed as its control pin draw/addra_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#53 Warning
+Non-clocked latch  
+The latch draw/addra_welcome_reg[0] cannot be properly analyzed as its control pin draw/addra_welcome_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#54 Warning
+Non-clocked latch  
+The latch draw/addra_welcome_reg[10] cannot be properly analyzed as its control pin draw/addra_welcome_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#55 Warning
+Non-clocked latch  
+The latch draw/addra_welcome_reg[11] cannot be properly analyzed as its control pin draw/addra_welcome_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#56 Warning
+Non-clocked latch  
+The latch draw/addra_welcome_reg[12] cannot be properly analyzed as its control pin draw/addra_welcome_reg[12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#57 Warning
+Non-clocked latch  
+The latch draw/addra_welcome_reg[13] cannot be properly analyzed as its control pin draw/addra_welcome_reg[13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#58 Warning
+Non-clocked latch  
+The latch draw/addra_welcome_reg[14] cannot be properly analyzed as its control pin draw/addra_welcome_reg[14]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#59 Warning
+Non-clocked latch  
+The latch draw/addra_welcome_reg[15] cannot be properly analyzed as its control pin draw/addra_welcome_reg[15]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#60 Warning
+Non-clocked latch  
+The latch draw/addra_welcome_reg[1] cannot be properly analyzed as its control pin draw/addra_welcome_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#61 Warning
+Non-clocked latch  
+The latch draw/addra_welcome_reg[2] cannot be properly analyzed as its control pin draw/addra_welcome_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#62 Warning
+Non-clocked latch  
+The latch draw/addra_welcome_reg[3] cannot be properly analyzed as its control pin draw/addra_welcome_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#63 Warning
+Non-clocked latch  
+The latch draw/addra_welcome_reg[4] cannot be properly analyzed as its control pin draw/addra_welcome_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#64 Warning
+Non-clocked latch  
+The latch draw/addra_welcome_reg[5] cannot be properly analyzed as its control pin draw/addra_welcome_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#65 Warning
+Non-clocked latch  
+The latch draw/addra_welcome_reg[6] cannot be properly analyzed as its control pin draw/addra_welcome_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#66 Warning
+Non-clocked latch  
+The latch draw/addra_welcome_reg[7] cannot be properly analyzed as its control pin draw/addra_welcome_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#67 Warning
+Non-clocked latch  
+The latch draw/addra_welcome_reg[8] cannot be properly analyzed as its control pin draw/addra_welcome_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#68 Warning
+Non-clocked latch  
+The latch draw/addra_welcome_reg[9] cannot be properly analyzed as its control pin draw/addra_welcome_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#69 Warning
+Non-clocked latch  
+The latch draw/addra_win_reg[0] cannot be properly analyzed as its control pin draw/addra_win_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#70 Warning
+Non-clocked latch  
+The latch draw/addra_win_reg[10] cannot be properly analyzed as its control pin draw/addra_win_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#71 Warning
+Non-clocked latch  
+The latch draw/addra_win_reg[11] cannot be properly analyzed as its control pin draw/addra_win_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#72 Warning
+Non-clocked latch  
+The latch draw/addra_win_reg[12] cannot be properly analyzed as its control pin draw/addra_win_reg[12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#73 Warning
+Non-clocked latch  
+The latch draw/addra_win_reg[13] cannot be properly analyzed as its control pin draw/addra_win_reg[13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#74 Warning
+Non-clocked latch  
+The latch draw/addra_win_reg[14] cannot be properly analyzed as its control pin draw/addra_win_reg[14]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#75 Warning
+Non-clocked latch  
+The latch draw/addra_win_reg[15] cannot be properly analyzed as its control pin draw/addra_win_reg[15]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#76 Warning
+Non-clocked latch  
+The latch draw/addra_win_reg[1] cannot be properly analyzed as its control pin draw/addra_win_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#77 Warning
+Non-clocked latch  
+The latch draw/addra_win_reg[2] cannot be properly analyzed as its control pin draw/addra_win_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#78 Warning
+Non-clocked latch  
+The latch draw/addra_win_reg[3] cannot be properly analyzed as its control pin draw/addra_win_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#79 Warning
+Non-clocked latch  
+The latch draw/addra_win_reg[4] cannot be properly analyzed as its control pin draw/addra_win_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#80 Warning
+Non-clocked latch  
+The latch draw/addra_win_reg[5] cannot be properly analyzed as its control pin draw/addra_win_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#81 Warning
+Non-clocked latch  
+The latch draw/addra_win_reg[6] cannot be properly analyzed as its control pin draw/addra_win_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#82 Warning
+Non-clocked latch  
+The latch draw/addra_win_reg[7] cannot be properly analyzed as its control pin draw/addra_win_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#83 Warning
+Non-clocked latch  
+The latch draw/addra_win_reg[8] cannot be properly analyzed as its control pin draw/addra_win_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#84 Warning
+Non-clocked latch  
+The latch draw/addra_win_reg[9] cannot be properly analyzed as its control pin draw/addra_win_reg[9]/G is not reached by a timing clock
 Related violations: <none>
 
 

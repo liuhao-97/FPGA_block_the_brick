@@ -19,12 +19,15 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
-module position_logic(
+//This is the position of the block
+module position_logic
+#(parameter blk_width = 11'd128,
+parameter blk_height = 10'd10)
+(
 input clk,
 input [4:0] button,  // middle up down left right 
-output reg [10:0] blkpos_x= 11'd623,
-output reg [9:0] blkpos_y= 10'd383
+output reg [10:0] blkpos_x,
+output reg [9:0] blkpos_y
     );
 
  
@@ -53,7 +56,7 @@ end
 always@*
 begin
 
-    case (button)
+    case (button)    //1 is press
       5'b10000:  button_next_stage = button_S0 ;
       5'b01000:  button_next_stage = button_S1 ;
       5'b00100:  button_next_stage = button_S2 ;
@@ -144,7 +147,7 @@ begin
   if(rst)
   begin
     blkpos_x <= 11'd623  ;
-    blkpos_y <= 10'd383  ;
+    blkpos_y <= 10'd753  ;
   end
   else
   begin
@@ -152,15 +155,15 @@ begin
     button_S0: 
       begin
         blkpos_x <= 11'd623  ;
-        blkpos_y <= 10'd383  ;
+        blkpos_y <= 10'd753  ;
       end
     
-    button_S1: 
+    button_S1: //up
       begin
-        if((blkpos_x>10) && (blkpos_x+32<=1269) && (blkpos_y>10) && (blkpos_y+32<=785))
+        if((blkpos_x>=10) && (blkpos_x+blk_width<=1269) && (blkpos_y>=600) && (blkpos_y+blk_height<=789))
         begin
           blkpos_x <= blkpos_x ;
-          blkpos_y <= blkpos_y + 10'd4 ;
+          blkpos_y <= blkpos_y - 10'd4 ;
         end
         else
         begin
@@ -169,12 +172,12 @@ begin
         end
       end
       
-     button_S2: 
+     button_S2: //down
       begin
-      if((blkpos_x>10) && (blkpos_x+32<=1269) && (blkpos_y>14) && (blkpos_y+32<=789))
+      if((blkpos_x>=10) && (blkpos_x+blk_width<=1269) && (blkpos_y>=596) && (blkpos_y+blk_height<=785))
       begin
         blkpos_x <= blkpos_x  ;
-        blkpos_y <= blkpos_y - 10'd4 ;
+        blkpos_y <= blkpos_y + 10'd4 ;
       end
       else
       begin
@@ -183,11 +186,11 @@ begin
       end
       end
       
-     button_S3: 
+     button_S3: //left
       begin
-      if((blkpos_x>10) && (blkpos_x+32<=1265) && (blkpos_y>10) && (blkpos_y+32<=789))
+      if((blkpos_x>=14) && (blkpos_x+blk_width<=1269) && (blkpos_y>=596) && (blkpos_y+blk_height<=789))
       begin
-        blkpos_x <= blkpos_x + 11'd4 ;
+        blkpos_x <= blkpos_x - 11'd4 ;
         blkpos_y <= blkpos_y ;
       end
       else
@@ -197,11 +200,11 @@ begin
       end
       end
        
-     button_S4: 
+     button_S4: //right
       begin
-      if((blkpos_x>14) && (blkpos_x+32<=1269) && (blkpos_y>10) && (blkpos_y+32<=789))
+      if((blkpos_x>=10) && (blkpos_x+blk_width<=1265) && (blkpos_y>=596) && (blkpos_y+blk_height<=789))
       begin
-        blkpos_x <= blkpos_x - 11'd4 ;
+        blkpos_x <= blkpos_x + 11'd4 ;
         blkpos_y <= blkpos_y ;
       end
       else

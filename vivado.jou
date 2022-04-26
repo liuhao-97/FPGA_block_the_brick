@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Apr 13 22:54:00 2022
+# Process ID: 29787
+# Current directory: /home/liuh0f/project/pro1
+# Command line: vivado
+# Log file: /home/liuh0f/project/pro1/vivado.log
+# Journal file: /home/liuh0f/project/pro1/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/liuh0f/test/test_pro/test_pro.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source a_tb.tcl
+run all

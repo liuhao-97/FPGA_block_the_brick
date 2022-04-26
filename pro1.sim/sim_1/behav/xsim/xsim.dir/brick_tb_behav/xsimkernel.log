@@ -1,0 +1,7 @@
+Running: xsim.dir/brick_tb_behav/xsimk -simmode gui -wdb brick_tb_behav.wdb -simrunnum 0 -socket 48101
+Design successfully loaded
+Design Loading Memory Usage: 44156 KB (Peak: 44276 KB)
+Design Loading CPU Usage: 40 ms
+Simulation completed
+Simulation Memory Usage: 120008 KB (Peak: 177280 KB)
+Simulation CPU Usage: 50 ms

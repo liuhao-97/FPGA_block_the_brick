@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/bouazim/Desktop/home/liuh0f/project/pro1/pro1.runs/synth_1/game_top.tcl"
+  variable script "/home/liuh0f/pro1_final/pro1.runs/synth_1/game_top.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,8 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param project.hsv.suppressChildGraphs 0
-set_param chipscope.maxJobs 16
+set_param chipscope.maxJobs 10
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -79,26 +78,57 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/bouazim/Desktop/home/liuh0f/project/pro1/pro1.cache/wt [current_project]
-set_property parent.project_path /home/bouazim/Desktop/home/liuh0f/project/pro1/pro1.xpr [current_project]
-set_property XPM_LIBRARIES XPM_CDC [current_project]
+set_property webtalk.parent_dir /home/liuh0f/pro1_final/pro1.cache/wt [current_project]
+set_property parent.project_path /home/liuh0f/pro1_final/pro1.xpr [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:nexys-a7-100t:part0:1.0 [current_project]
-set_property ip_output_repo /home/bouazim/Desktop/home/liuh0f/project/pro1/pro1.cache/ip [current_project]
+set_property ip_output_repo /home/liuh0f/pro1_final/pro1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
+add_files /home/liuh0f/pro1_final/brick.coe
+add_files /home/liuh0f/pro1_final/brickoutwelcome.coe
+add_files /home/liuh0f/pro1_final/gameover.coe
+add_files /home/liuh0f/pro1_final/ball.coe
+add_files /home/liuh0f/pro1_final/background.coe
+add_files /home/liuh0f/pro1_final/winscreen.coe
 read_verilog -library xil_defaultlib {
-  /home/bouazim/Desktop/home/liuh0f/project/pro1/pro1.srcs/sources_1/new/drawcon.v
-  /home/bouazim/Desktop/home/liuh0f/project/pro1/pro1.srcs/sources_1/new/position_logic.v
-  /home/bouazim/Desktop/home/liuh0f/project/pro1/pro1.srcs/sources_1/new/vga_out.v
-  /home/bouazim/Desktop/home/liuh0f/project/pro1/pro1.srcs/sources_1/new/game_top.v
+  /home/liuh0f/pro1_final/pro1.srcs/sources_1/new/all_brick.v
+  /home/liuh0f/pro1_final/pro1.srcs/sources_1/new/ball.v
+  /home/liuh0f/pro1_final/pro1.srcs/sources_1/new/brick.v
+  /home/liuh0f/pro1_final/pro1.srcs/sources_1/new/brick_position.v
+  /home/liuh0f/pro1_final/pro1.srcs/sources_1/new/drawcon_new.v
+  /home/liuh0f/pro1_final/pro1.srcs/sources_1/new/multidigit.v
+  /home/liuh0f/pro1_final/pro1.srcs/sources_1/new/position_logic.v
+  /home/liuh0f/pro1_final/pro1.srcs/sources_1/new/score_seg.v
+  /home/liuh0f/pro1_final/pro1.srcs/sources_1/new/sevenseg.v
+  /home/liuh0f/pro1_final/pro1.srcs/sources_1/new/vga_out.v
+  /home/liuh0f/pro1_final/pro1.srcs/sources_1/new/game_top.v
 }
-read_ip -quiet /home/bouazim/Desktop/home/liuh0f/project/pro1/pro1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-set_property used_in_implementation false [get_files -all /home/bouazim/Desktop/home/liuh0f/project/pro1/pro1.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/bouazim/Desktop/home/liuh0f/project/pro1/pro1.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
-set_property used_in_implementation false [get_files -all /home/bouazim/Desktop/home/liuh0f/project/pro1/pro1.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
+read_ip -quiet /home/liuh0f/pro1_final/pro1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+set_property used_in_implementation false [get_files -all /home/liuh0f/pro1_final/pro1.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/liuh0f/pro1_final/pro1.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
+set_property used_in_implementation false [get_files -all /home/liuh0f/pro1_final/pro1.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
+
+read_ip -quiet /home/liuh0f/pro1_final/pro1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+set_property used_in_implementation false [get_files -all /home/liuh0f/pro1_final/pro1.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
+
+read_ip -quiet /home/liuh0f/pro1_final/pro1.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
+set_property used_in_implementation false [get_files -all /home/liuh0f/pro1_final/pro1.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1_ooc.xdc]
+
+read_ip -quiet /home/liuh0f/pro1_final/pro1.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2.xci
+set_property used_in_implementation false [get_files -all /home/liuh0f/pro1_final/pro1.gen/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2_ooc.xdc]
+
+read_ip -quiet /home/liuh0f/pro1_final/pro1.srcs/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3.xci
+set_property used_in_implementation false [get_files -all /home/liuh0f/pro1_final/pro1.gen/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3_ooc.xdc]
+
+read_ip -quiet /home/liuh0f/pro1_final/pro1.srcs/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4.xci
+set_property used_in_implementation false [get_files -all /home/liuh0f/pro1_final/pro1.gen/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4_ooc.xdc]
+
+read_ip -quiet /home/liuh0f/pro1_final/pro1.srcs/sources_1/ip/blk_mem_gen_5/blk_mem_gen_5.xci
+set_property used_in_implementation false [get_files -all /home/liuh0f/pro1_final/pro1.gen/sources_1/ip/blk_mem_gen_5/blk_mem_gen_5_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -109,8 +139,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/bouazim/Desktop/home/liuh0f/project/pro1/nexys-a7-100t-master.xdc
-set_property used_in_implementation false [get_files /home/bouazim/Desktop/home/liuh0f/project/pro1/nexys-a7-100t-master.xdc]
+read_xdc /home/liuh0f/pro1_final/nexys-a7-100t-master.xdc
+set_property used_in_implementation false [get_files /home/liuh0f/pro1_final/nexys-a7-100t-master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

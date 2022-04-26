@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="bouazim" Host="rsws08.kaust.edu.sa" Pid="62253" HostCore="64" HostMemory="528255656">
+    <Process Command="vivado" Owner="liuh0f" Host="rsws09.kaust.edu.sa" Pid="16699" HostCore="40" HostMemory="528261908">
     </Process>
 </ProcessHandle>

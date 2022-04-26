@@ -1,0 +1,7 @@
+Running: xsim.dir/drawcon_new_tb_behav/xsimk -simmode gui -wdb drawcon_new_tb_behav.wdb -simrunnum 0 -socket 52693
+Design successfully loaded
+Design Loading Memory Usage: 46096 KB (Peak: 46096 KB)
+Design Loading CPU Usage: 60 ms
+Simulation completed
+Simulation Memory Usage: 126048 KB (Peak: 179220 KB)
+Simulation CPU Usage: 100 ms

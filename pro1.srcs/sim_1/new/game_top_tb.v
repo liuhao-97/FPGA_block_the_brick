@@ -24,13 +24,14 @@ module game_top_tb();
 
 reg clk;
 reg [4:0] button = 5'b00000;
+reg start;
 wire hsync, vsync;
 wire [3:0] pix_r, pix_g, pix_b;
 
 
 game_top game(
 .clk(clk),
-.button(button),  
+.button(button),  .start(start),
 .pix_r(pix_r), .pix_g(pix_g), .pix_b(pix_b), 
 .hsync(hsync), .vsync(vsync)
     );
